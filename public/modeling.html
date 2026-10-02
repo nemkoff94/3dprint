@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D-моделирование и прототипирование на заказ | 3Dело</title>
+    <meta
+      name="description"
+      content="Разрабатываем 3D-модели по описанию, чертежам, фотографиям и готовым образцам. Подготавливаем модели к 3D-печати и изготавливаем прототипы."
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <a class="brand" href="/">3Dело</a>
+        <button class="header-menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+          Меню
+        </button>
+        <div class="header-right" id="headerNav">
+          <nav class="header-nav" aria-label="Основная навигация">
+            <a href="/">Главная</a>
+            <a href="/custom-sign">Вывески на заказ</a>
+            <a href="/3d-print">3D-печать</a>
+            <a href="/modeling" aria-current="page">3D-моделирование</a>
+            <a href="/catalog">Каталог</a>
+            <a href="/calculator">Калькулятор</a>
+          </nav>
+          <button class="button button-primary" type="button" data-open-order-modal>Заказать</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section modeling-hero">
+        <div class="container hero-grid modeling-hero-grid">
+          <div class="hero-text-wrap reveal">
+            <span class="badge">Услуга 3Dело</span>
+            <h1>3D-моделирование на заказ</h1>
+            <p class="modeling-hero-lead">
+              Превращаем идею, чертёж или фотографию в готовую 3D-модель и физический прототип.
+            </p>
+            <p>Разрабатываем изделия с нуля, дорабатываем готовые модели и подготавливаем их к 3D-печати.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#modeling-cta">Обсудить проект</a>
+              <a class="button button-secondary" href="/3d-print">Заказать 3D-печать</a>
+            </div>
+          </div>
+
+          <div class="modeling-hero-visual reveal delay-1" role="img" aria-label="Абстрактный технологичный плейсхолдер 3D-моделирования">
+            <div class="modeling-hero-shape modeling-shape-main"></div>
+            <div class="modeling-hero-shape modeling-shape-accent"></div>
+            <div class="modeling-hero-shape modeling-shape-grid"></div>
+            <p class="hero-placeholder-label">placeholder для рендеров проектов и прототипов</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section modeling-section-soft">
+        <div class="container">
+          <h2 class="section-title reveal">Не обязательно иметь готовую 3D-модель</h2>
+          <p class="section-subtitle reveal delay-1">
+            Чтобы начать работу, не нужно разбираться в 3D-моделировании. Покажите, что вы хотите получить, - мы
+            поможем определить способ реализации.
+          </p>
+
+          <div class="grid custom-cards-grid custom-cards-3col modeling-start-grid">
+            <article class="card reveal">
+              <div class="card-content">
+                <h3>Идея</h3>
+                <p>Есть только задумка или описание будущего изделия.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-1">
+              <div class="card-content">
+                <h3>Фотография</h3>
+                <p>
+                  Есть фотография существующей детали или предмета, который нужно повторить или изменить.
+                </p>
+              </div>
+            </article>
+            <article class="card reveal delay-2">
+              <div class="card-content">
+                <h3>Чертёж</h3>
+                <p>Есть размеры, схема или технический чертёж.</p>
+              </div>
+            </article>
+            <article class="card reveal">
+              <div class="card-content">
+                <h3>Эскиз</h3>
+                <p>Можно начать даже с рисунка от руки, если понятно, что должно получиться.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-1">
+              <div class="card-content">
+                <h3>Готовая модель</h3>
+                <p>Нужно изменить существующий STL, 3MF или другой подходящий файл.</p>
+              </div>
+            </article>
+          </div>
+
+          <p class="modeling-note reveal delay-2">
+            Точность восстановления изделия только по фотографии зависит от количества исходных данных, размеров и
+            требований к результату.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title reveal">От идеи до готового изделия</h2>
+          <div class="grid custom-cards-grid custom-cards-3col">
+            <article class="card reveal">
+              <div class="card-content">
+                <h3>Модель с нуля</h3>
+                <p>Разрабатываем 3D-модель по вашему описанию, размерам, эскизу или техническому заданию.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-1">
+              <div class="card-content">
+                <h3>Доработка модели</h3>
+                <p>Изменяем размеры, конструкцию, крепления, посадочные места и другие элементы готовой модели.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-2">
+              <div class="card-content">
+                <h3>Корпуса и детали</h3>
+                <p>Проектируем корпуса, крышки, крепления, держатели, переходники и другие изделия.</p>
+              </div>
+            </article>
+            <article class="card reveal">
+              <div class="card-content">
+                <h3>Прототипы</h3>
+                <p>Создаём физический прототип, чтобы проверить форму, размеры и конструкцию до запуска в производство.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-1">
+              <div class="card-content">
+                <h3>Модели для 3D-печати</h3>
+                <p>Подготавливаем конструкцию с учётом особенностей выбранного способа изготовления.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-2">
+              <div class="card-content">
+                <h3>Изделия для бизнеса</h3>
+                <p>
+                  Разрабатываем элементы оформления, торгового оборудования, POS-материалы, держатели, стенды и другие
+                  нестандартные изделия.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section modeling-section-soft">
+        <div class="container">
+          <h2 class="section-title reveal">Сначала проверить - потом производить</h2>
+          <p class="section-subtitle reveal delay-1">
+            Если вы собираетесь делать изделие не в одном экземпляре, прототип помогает проверить конструкцию до запуска
+            серии.
+          </p>
+
+          <div class="modeling-flow reveal delay-2" aria-label="Последовательность прототипирования">
+            <span>3D-модель</span>
+            <span aria-hidden="true">→</span>
+            <span>прототип</span>
+            <span aria-hidden="true">→</span>
+            <span>проверка</span>
+            <span aria-hidden="true">→</span>
+            <span>доработка</span>
+            <span aria-hidden="true">→</span>
+            <span>готовое изделие</span>
+          </div>
+
+          <p class="modeling-note reveal delay-3">
+            На прототипе можно проверить размеры, внешний вид, удобство сборки, расположение креплений и другие важные
+            параметры. После проверки модель можно доработать и использовать для последующего изготовления.
+            Прототип не всегда заменяет полноценное промышленное тестирование и проверяется в контексте конкретной задачи.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Что мы моделируем</h2>
+          <div class="grid modeling-tags-grid reveal delay-1">
+            <article class="card"><div class="card-content"><h3>Корпуса</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Технические детали</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Крепления</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Держатели</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Переходники</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Элементы интерьера</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Декоративные изделия</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Прототипы</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Элементы вывесок</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Нестандартные изделия</h3></div></article>
+            <article class="card"><div class="card-content"><h3>Небольшие серии</h3></div></article>
+          </div>
+          <p class="section-subtitle reveal delay-2">
+            Если вашего варианта нет в списке - это не значит, что его нельзя сделать. Опишите задачу, и мы оценим её.
+          </p>
+        </div>
+      </section>
+
+      <section class="section modeling-section-soft">
+        <div class="container">
+          <h2 class="section-title reveal">Как создаётся модель</h2>
+          <div class="grid custom-steps-grid">
+            <article class="card process-step reveal">
+              <div class="card-content">
+                <span class="custom-step-number">01</span>
+                <h3>Задача</h3>
+                <p>Вы рассказываете, что нужно получить и для чего будет использоваться изделие.</p>
+              </div>
+            </article>
+            <article class="card process-step reveal delay-1">
+              <div class="card-content">
+                <span class="custom-step-number">02</span>
+                <h3>Исходные данные</h3>
+                <p>Получаем размеры, фотографии, чертежи, эскизы, примеры или готовую модель.</p>
+              </div>
+            </article>
+            <article class="card process-step reveal delay-2">
+              <div class="card-content">
+                <span class="custom-step-number">03</span>
+                <h3>Конструкция</h3>
+                <p>Определяем форму, размеры, соединения и другие особенности изделия.</p>
+              </div>
+            </article>
+            <article class="card process-step reveal">
+              <div class="card-content">
+                <span class="custom-step-number">04</span>
+                <h3>3D-модель</h3>
+                <p>Создаём цифровую модель и согласовываем основные параметры.</p>
+              </div>
+            </article>
+            <article class="card process-step reveal delay-1">
+              <div class="card-content">
+                <span class="custom-step-number">05</span>
+                <h3>Прототип</h3>
+                <p>При необходимости изготавливаем тестовый экземпляр и проверяем результат.</p>
+              </div>
+            </article>
+            <article class="card process-step reveal delay-2">
+              <div class="card-content">
+                <span class="custom-step-number">06</span>
+                <h3>Финальная версия</h3>
+                <p>Вносим необходимые изменения и подготавливаем модель к изготовлению.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title reveal">Результат работы</h2>
+          <div class="grid custom-cards-grid custom-cards-2col">
+            <article class="card reveal">
+              <div class="card-content">
+                <h3>3D-модель</h3>
+                <p>Готовая цифровая модель изделия.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-1">
+              <div class="card-content">
+                <h3>Файл для печати</h3>
+                <p>Подготовленный файл для выбранного способа изготовления, если это входит в задачу.</p>
+              </div>
+            </article>
+            <article class="card reveal">
+              <div class="card-content">
+                <h3>Физический прототип</h3>
+                <p>При необходимости изготовим тестовый экземпляр на 3D-принтере.</p>
+              </div>
+            </article>
+            <article class="card reveal delay-1">
+              <div class="card-content">
+                <h3>Готовое изделие</h3>
+                <p>
+                  Если задача предполагает дальнейшее производство, можем сразу перейти от модели к изготовлению.
+                </p>
+              </div>
+            </article>
+          </div>
+          <p class="modeling-note reveal delay-2">
+            В зависимости от задачи можем подготовить подходящий формат файла, например STL, 3MF или STEP.
+          </p>
+        </div>
+      </section>
+
+      <section class="section modeling-section-soft">
+        <div class="container">
+          <h2 class="section-title reveal">Стоимость зависит от задачи</h2>
+          <p class="section-subtitle reveal delay-1">
+            У 3D-моделирования нет фиксированной цены за «одну модель». Простая деталь и сложный корпус требуют
+            совершенно разного объёма работы.
+          </p>
+          <ul class="print-factors-list reveal delay-2">
+            <li>сложность конструкции;</li>
+            <li>количество элементов;</li>
+            <li>точность и требования к размерам;</li>
+            <li>наличие исходных материалов;</li>
+            <li>необходимость разработать конструкцию с нуля;</li>
+            <li>количество корректировок;</li>
+            <li>необходимость физического прототипа;</li>
+            <li>подготовка модели к производству.</li>
+          </ul>
+          <p class="section-subtitle reveal delay-3">
+            Поэтому сначала разбираемся в задаче, а затем называем стоимость и сроки.
+          </p>
+          <div class="custom-inline-cta reveal delay-3">
+            <p>Можете отправить задачу сразу в действующую форму заявки на изготовление и 3D-печать.</p>
+            <a class="button button-primary" href="/3d-print#print-request-form">Получить расчёт</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container modeling-production-block reveal">
+          <div>
+            <h2 class="section-title">От 3D-модели до готового изделия</h2>
+            <p class="section-subtitle">
+              Не обязательно искать отдельного подрядчика для печати. Если модель создаётся под последующее
+              изготовление, мы можем сразу напечатать прототип или готовое изделие.
+            </p>
+            <div class="modeling-flow modeling-flow-compact" aria-label="Последовательность от идеи до изделия">
+              <span>Идея</span>
+              <span aria-hidden="true">→</span>
+              <span>3D-модель</span>
+              <span aria-hidden="true">→</span>
+              <span>прототип</span>
+              <span aria-hidden="true">→</span>
+              <span>готовое изделие</span>
+            </div>
+          </div>
+          <a class="button button-primary" href="/3d-print">3D-печать на заказ</a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container custom-spotlight reveal">
+          <div>
+            <h2 class="section-title">Нужна нестандартная вывеска?</h2>
+            <p class="section-subtitle">
+              Можем разработать объёмные буквы, логотип, декоративные элементы или нестандартную конструкцию специально
+              под ваш фасад или интерьер.
+            </p>
+          </div>
+          <a class="button button-secondary" href="/custom-sign">Вывески на заказ</a>
+        </div>
+      </section>
+
+      <section class="container cta" id="modeling-cta">
+        <div class="order-cta-wrap reveal">
+          <h2 class="section-title">Есть идея, но нет готовой модели?</h2>
+          <p class="section-subtitle">
+            Расскажите о задаче. Можно начать с фотографии, эскиза, чертежа или простого описания.
+          </p>
+          <div id="modelingOrderFormMount"></div>
+        </div>
+
+        <div class="cta-box modeling-final-cta reveal">
+          <div>
+            <h2>Есть идея, но нет готовой модели?</h2>
+            <p>
+              Расскажите, что хотите получить. Можно начать с фотографии, эскиза, чертежа или просто описания задачи.
+            </p>
+          </div>
+          <div class="catalog-cta-actions">
+            <a class="button button-primary" href="mailto:hello@3delo.org">Обсудить проект</a>
+            <a class="button button-secondary" href="/3d-print">Заказать 3D-печать</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h2 class="footer-title">3Dело</h2>
+          <p class="footer-note">3D-печать, объёмные вывески и изделия на заказ.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Разделы сайта">
+          <a href="/">Главная</a>
+          <a href="/modeling">3D-моделирование</a>
+          <a href="/3d-print">3D-печать</a>
+          <a href="/custom-sign">Вывески на заказ</a>
+          <a href="/catalog">Каталог</a>
+        </nav>
+
+        <div>
+          <p class="footer-contact">Телефон: +7 (900) 000-00-00</p>
+          <p class="footer-contact">Email: hello@3delo.org</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/order-form.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Товары | 3Dело</title>
+    <meta name="description" content="Управление товарами каталога" />
+    <link rel="stylesheet" href="/admin-assets/css/admin.css" />
+  </head>
+  <body data-admin-page="products-list">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <a href="/admin/orders" class="admin-brand">3Dело</a>
+        <nav class="admin-nav" aria-label="Админ навигация">
+          <a href="/admin/orders">Заявки</a>
+          <a href="/admin/products" aria-current="page">Товары</a>
+        </nav>
+        <button id="logoutBtn" type="button" class="admin-btn admin-btn-ghost">Выйти</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-title-row admin-title-row-detail">
+        <div>
+          <h1>Товары</h1>
+          <p>Каталог готовых вывесок</p>
+        </div>
+        <a class="admin-btn admin-btn-primary" href="/admin/product.html">Добавить товар</a>
+      </section>
+
+      <section class="admin-filters-card">
+        <div class="admin-filters-grid admin-filters-grid-products">
+          <div>
+            <label for="productStatusFilter">Статус</label>
+            <select id="productStatusFilter">
+              <option value="all">Все</option>
+              <option value="published">Опубликованные</option>
+              <option value="hidden">Скрытые</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="productCategoryFilter">Категория</label>
+            <select id="productCategoryFilter">
+              <option value="all">Все</option>
+              <option value="cafes">Кафе и рестораны</option>
+              <option value="shops">Магазины</option>
+              <option value="beauty">Салоны красоты</option>
+              <option value="flowers">Цветочные магазины</option>
+              <option value="offices">Офисы</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+
+          <div class="admin-search-wrap">
+            <label for="productSearchFilter">Поиск</label>
+            <input id="productSearchFilter" type="search" placeholder="Поиск по названию" />
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-table-card">
+        <div class="admin-table-scroll">
+          <table class="admin-table" aria-label="Список товаров">
+            <thead>
+              <tr>
+                <th>Изображение</th>
+                <th>Название</th>
+                <th>Категория</th>
+                <th>Цена</th>
+                <th>Статус</th>
+                <th>Порядок</th>
+                <th>Изменён</th>
+                <th>Действия</th>
+              </tr>
+            </thead>
+            <tbody id="productsTableBody"></tbody>
+          </table>
+        </div>
+        <p id="productsEmptyState" class="admin-empty-text" hidden>Товары не найдены</p>
+      </section>
+    </main>
+
+    <script src="/admin-assets/js/auth.js" defer></script>
+    <script src="/admin-assets/js/products.js" defer></script>
+  </body>
+</html>

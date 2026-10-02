@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявки | 3Dело</title>
+    <meta name="description" content="Список заявок клиентов" />
+    <link rel="stylesheet" href="/admin-assets/css/admin.css" />
+  </head>
+  <body data-admin-page="orders-list">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <a href="/admin/orders" class="admin-brand">3Dело</a>
+        <nav class="admin-nav" aria-label="Админ навигация">
+          <a href="/admin/orders" aria-current="page">Заявки</a>
+          <a href="/admin/products">Товары</a>
+        </nav>
+        <button id="logoutBtn" type="button" class="admin-btn admin-btn-ghost">Выйти</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-title-row">
+        <h1>Заявки</h1>
+        <p>Обращения клиентов с сайта</p>
+      </section>
+
+      <section class="admin-stats-grid" id="statsGrid">
+        <article class="admin-stat-card">
+          <p class="admin-stat-label">Всего</p>
+          <p class="admin-stat-value" id="statTotal">0</p>
+        </article>
+        <article class="admin-stat-card">
+          <p class="admin-stat-label">Новые</p>
+          <p class="admin-stat-value" id="statNew">0</p>
+        </article>
+        <article class="admin-stat-card">
+          <p class="admin-stat-label">В работе</p>
+          <p class="admin-stat-value" id="statProgress">0</p>
+        </article>
+        <article class="admin-stat-card">
+          <p class="admin-stat-label">Завершено</p>
+          <p class="admin-stat-value" id="statCompleted">0</p>
+        </article>
+      </section>
+
+      <section class="admin-filters-card">
+        <div class="admin-filters-grid">
+          <div>
+            <label for="statusFilter">Статус</label>
+            <select id="statusFilter">
+              <option value="all">Все</option>
+              <option value="new">Новые</option>
+              <option value="in_progress">В работе</option>
+              <option value="completed">Завершено</option>
+              <option value="cancelled">Отменено</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="serviceFilter">Услуга</label>
+            <select id="serviceFilter">
+              <option value="all">Все</option>
+              <option value="custom-sign">Вывеска</option>
+              <option value="3d-print">3D-печать</option>
+              <option value="modeling">3D-моделирование</option>
+              <option value="prototyping">Прототипирование</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+
+          <div class="admin-search-wrap">
+            <label for="searchFilter">Поиск</label>
+            <input id="searchFilter" type="search" placeholder="Имя, телефон или описание" />
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-table-card">
+        <div class="admin-table-scroll">
+          <table class="admin-table" aria-label="Список заявок">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Дата</th>
+                <th>Клиент</th>
+                <th>Телефон</th>
+                <th>Услуга</th>
+                <th>Статус</th>
+                <th>Файл</th>
+              </tr>
+            </thead>
+            <tbody id="ordersTableBody"></tbody>
+          </table>
+        </div>
+        <p id="ordersEmptyState" class="admin-empty-text" hidden>Заявок не найдено</p>
+      </section>
+    </main>
+
+    <script src="/admin-assets/js/auth.js" defer></script>
+    <script src="/admin-assets/js/orders.js" defer></script>
+  </body>
+</html>

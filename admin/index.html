@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход в админку | 3Dело</title>
+    <meta name="description" content="Вход в административную панель 3Dело" />
+    <link rel="stylesheet" href="/admin-assets/css/admin.css" />
+  </head>
+  <body>
+    <main class="admin-login-page">
+      <section class="admin-login-card">
+        <h1>3Dело</h1>
+        <p class="admin-login-subtitle">Панель управления</p>
+
+        <form id="loginForm" novalidate>
+          <label class="admin-field-label" for="loginInput">Логин</label>
+          <input id="loginInput" name="login" type="text" autocomplete="username" required />
+
+          <label class="admin-field-label" for="passwordInput">Пароль</label>
+          <input
+            id="passwordInput"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+
+          <p id="loginError" class="admin-error-text" role="alert" aria-live="polite"></p>
+          <button type="submit" class="admin-btn admin-btn-primary">Войти</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/admin-assets/js/auth.js" defer></script>
+  </body>
+</html>

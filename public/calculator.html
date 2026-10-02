@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор стоимости вывески — 3Dело</title>
+    <meta
+      name="description"
+      content="Рассчитайте предварительную стоимость объёмной вывески онлайн. Настройте текст, размеры, материал, подсветку и другие параметры и посмотрите результат в 3D."
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <a class="brand" href="/">3Dело</a>
+        <button class="header-menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+          Меню
+        </button>
+        <div class="header-right" id="headerNav">
+          <nav class="header-nav" aria-label="Основная навигация">
+            <a href="/">Главная</a>
+            <a href="/custom-sign">Вывески на заказ</a>
+            <a href="/3d-print">3D-печать</a>
+            <a href="/modeling">3D-моделирование</a>
+            <a href="/catalog">Каталог</a>
+            <a href="/calculator" aria-current="page">Калькулятор</a>
+          </nav>
+          <button class="button button-primary" type="button" data-open-order-modal>Заказать</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section-title">Рассчитайте стоимость вывески</h1>
+          <p class="section-subtitle">
+            Настройте размеры, текст и оформление — стоимость пересчитывается автоматически, а результат можно увидеть в 3D.
+          </p>
+          <p class="calc-hero-note">
+            Расчёт предварительный. Точная стоимость зависит от конструкции, материалов, способа крепления и других особенностей проекта.
+          </p>
+
+          <section class="calc-configurator" aria-label="Калькулятор стоимости вывески" style="margin-top: var(--space-5)">
+            <div class="calc-layout">
+              <article class="calc-panel calc-controls-panel" aria-label="Параметры вывески">
+                <h2 class="calc-panel-title">Параметры</h2>
+
+                <div class="calc-form-grid">
+                  <label class="calc-field" for="calcText">
+                    <span>Текст</span>
+                    <input id="calcText" name="text" type="text" maxlength="20" value="КОФЕЙНЯ" autocomplete="off" />
+                  </label>
+
+                  <div class="calc-field">
+                    <div class="calc-field-head">
+                      <label for="calcHeight">Высота букв</label>
+                      <output id="calcHeightValue" for="calcHeight">300 мм</output>
+                    </div>
+                    <input id="calcHeight" name="height" type="range" min="100" max="1000" step="10" value="300" />
+                  </div>
+
+                  <div class="calc-field">
+                    <div class="calc-field-head">
+                      <label for="calcDepth">Глубина</label>
+                      <output id="calcDepthValue" for="calcDepth">60 мм</output>
+                    </div>
+                    <input id="calcDepth" name="depth" type="range" min="20" max="200" step="5" value="60" />
+                  </div>
+
+                  <label class="calc-field" for="calcFontFamily">
+                    <span>Шрифт</span>
+                    <select id="calcFontFamily" name="fontFamily">
+                      <option value="notoSansBold">Noto Sans Bold</option>
+                      <option value="nunitoBlack">Nunito Black</option>
+                      <option value="onestExtraBold">Onest Extra Bold</option>
+                      <option value="rubikBlack">Rubik Black</option>
+                      <option value="futuraRoundBold">FuturaRoundBold</option>
+                      <option value="interBlack">Inter Black</option>
+                      <option value="russoOne">Russo One</option>
+                    </select>
+                  </label>
+
+                  <label class="calc-field" for="calcFontWeight">
+                    <span>Начертание</span>
+                    <select id="calcFontWeight" name="fontWeight">
+                      <option value="regular">Обычный</option>
+                      <option value="bold">Жирный</option>
+                    </select>
+                  </label>
+
+                  <fieldset class="calc-field calc-colors">
+                    <legend>Цвет букв</legend>
+                    <div class="calc-swatch-list" role="radiogroup" aria-label="Готовые цвета">
+                      <button type="button" class="calc-swatch is-active" data-color="#f4f4f4" aria-label="Белый" title="Белый"></button>
+                      <button type="button" class="calc-swatch" data-color="#1c1c1c" aria-label="Чёрный" title="Чёрный"></button>
+                      <button type="button" class="calc-swatch" data-color="#7d8288" aria-label="Серый" title="Серый"></button>
+                      <button type="button" class="calc-swatch" data-color="#ba2d2d" aria-label="Красный" title="Красный"></button>
+                      <button type="button" class="calc-swatch" data-color="#2f5eb8" aria-label="Синий" title="Синий"></button>
+                      <button type="button" class="calc-swatch" data-color="#1f8a4a" aria-label="Зелёный" title="Зелёный"></button>
+                    </div>
+                    <label class="calc-color-custom" for="calcColor">
+                      <span>Свой цвет</span>
+                      <input id="calcColor" name="color" type="color" value="#f4f4f4" />
+                    </label>
+                  </fieldset>
+
+                  <label class="calc-field" for="calcLighting">
+                    <span>Подсветка</span>
+                    <select id="calcLighting" name="lighting">
+                      <option value="none">Без подсветки</option>
+                      <option value="backlit">Контражурная</option>
+                      <option value="faceLit">Светящиеся буквы</option>
+                    </select>
+                  </label>
+
+                  <label class="calc-field" for="calcMounting">
+                    <span>Крепление</span>
+                    <select id="calcMounting" name="mounting">
+                      <option value="undefined">Не определено</option>
+                      <option value="standoffs">Дистанционные держатели</option>
+                      <option value="base">Монтажная основа</option>
+                      <option value="other">Другое</option>
+                    </select>
+                  </label>
+
+                  <label class="calc-field" for="calcMaterial">
+                    <span>Материал</span>
+                    <select id="calcMaterial" name="material">
+                      <option value="PLA">PLA</option>
+                      <option value="PETG">PETG</option>
+                      <option value="OTHER">Другой</option>
+                    </select>
+                  </label>
+
+                  <label class="calc-field" for="calcQuantity">
+                    <span>Количество</span>
+                    <input id="calcQuantity" name="quantity" type="number" min="1" max="100" step="1" value="1" inputmode="numeric" />
+                  </label>
+                </div>
+              </article>
+
+              <article class="calc-panel calc-preview-panel" aria-label="3D-превью">
+                <h2 class="calc-panel-title">3D-превью</h2>
+                <p class="calc-preview-hint">Вращение: мышь/тачпад. Масштаб: колесо. Панорама: правая кнопка мыши. Размеры показываются стрелками в мм.</p>
+                <div id="sign3dViewport" class="calc-viewport" role="img" aria-label="Объёмная модель вывески"></div>
+                <p id="sign3dFallback" class="calc-3d-fallback" hidden>3D-превью временно недоступно</p>
+              </article>
+
+              <article class="calc-price-panel" aria-live="polite">
+                <h2>Предварительная стоимость</h2>
+                <p class="calc-price-value" id="calcPrice">14 900 ₽</p>
+                <p class="calc-price-badge">Предварительный расчёт</p>
+                <p class="calc-price-note">
+                  Финальная стоимость рассчитывается после уточнения конструкции и условий изготовления.
+                </p>
+                <p class="calc-price-note">
+                  Итоговая стоимость зависит от конструкции, материала, подсветки, крепления и других параметров.
+                </p>
+                <div class="calc-actions">
+                  <button id="calcOrderButton" type="button" class="button button-primary">Заказать такую вывеску</button>
+                  <a href="/catalog" class="button button-secondary">Посмотреть готовые вывески</a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="calc-explain" aria-label="Почему расчёт предварительный">
+            <h2 class="section-title">Почему расчёт предварительный?</h2>
+            <p>
+              Конечная стоимость зависит не только от размеров букв. На неё могут влиять конструкция, особенности фасада,
+              способ крепления, количество элементов, обработка, подсветка и другие параметры.
+            </p>
+            <p>
+              Калькулятор помогает получить ориентир и понять порядок стоимости. После заявки мы уточняем детали и
+              подтверждаем финальную цену.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h2 class="footer-title">3Dело</h2>
+          <p class="footer-note">3D-печать, объёмные вывески и изделия на заказ.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Разделы сайта">
+          <a href="/">Главная</a>
+          <a href="/custom-sign">Вывески на заказ</a>
+          <a href="/catalog">Каталог</a>
+          <a href="/calculator">Калькулятор</a>
+        </nav>
+
+        <div>
+          <p class="footer-contact">Телефон: +7 (900) 000-00-00</p>
+          <p class="footer-contact">Email: hello@3delo.org</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/order-form.js" defer></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three/build/three.module.js",
+          "three/addons/": "/vendor/three/examples/jsm/"
+        }
+      }
+    </script>
+    <script src="/js/calculator.js" type="module"></script>
+  </body>
+</html>

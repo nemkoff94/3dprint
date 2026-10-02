@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3Dело - Студия 3D-печати и вывесок</title>
+    <meta
+      name="description"
+      content="3Dело: изготовление вывесок, объемных букв, 3D-печать, моделирование и прототипирование для бизнеса."
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <a class="brand" href="/">3Dело</a>
+        <button class="header-menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+          Меню
+        </button>
+        <div class="header-right" id="headerNav">
+          <nav class="header-nav" aria-label="Основная навигация">
+            <a href="/" aria-current="page">Главная</a>
+            <a href="/custom-sign">Вывески на заказ</a>
+            <a href="/3d-print">3D-печать</a>
+            <a href="/modeling">3D-моделирование</a>
+            <a href="/catalog">Каталог</a>
+            <a href="/calculator">Калькулятор</a>
+          </nav>
+          <button class="button button-primary" type="button" data-open-order-modal>Заказать</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section home-hero">
+        <div class="container hero-grid">
+          <div class="hero-text-wrap reveal">
+            <span class="badge">3Dело</span>
+            <h1>Делаем вещи,<br />которые работают на бизнес</h1>
+            <p>
+              Объёмные вывески, 3D-печать и изделия на заказ.
+              От идеи до готового объекта.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#works">Смотреть работы</a>
+              <a class="button button-secondary" href="/calculator">Рассчитать вывеску</a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <img
+              class="home-hero-image"
+              src="/assets/images/avtoservis.jpg"
+              alt="Готовая вывеска для автосервиса"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <h2 class="section-title reveal">Основные направления</h2>
+          <p class="section-subtitle reveal delay-1">
+            Делаем акцент на практическом результате: вывески и изделия, которые помогают бизнесу быть
+            заметнее и эффективнее.
+          </p>
+
+          <div class="grid directions-grid">
+            <article class="card reveal">
+              <div class="card-content">
+                <h3>Объёмные вывески</h3>
+                <p>Объёмные буквы и вывески для бизнеса.</p>
+              </div>
+            </article>
+
+            <article class="card reveal delay-1">
+              <div class="card-content">
+                <h3>Вывески на заказ</h3>
+                <p>Разрабатываем и изготавливаем вывески под конкретную задачу.</p>
+              </div>
+            </article>
+
+            <article class="card reveal delay-2">
+              <div class="card-content">
+                <h3>3D-печать</h3>
+                <p>Печатаем детали, изделия и небольшие серии.</p>
+              </div>
+            </article>
+
+            <article class="card reveal delay-3">
+              <div class="card-content">
+                <h3>3D-моделирование</h3>
+                <p>Создаём и подготавливаем модели для производства.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="works">
+        <div class="container">
+          <h2 class="section-title reveal">Примеры работ</h2>
+          <p class="section-subtitle reveal delay-1">
+            Портфолио выполненных нами проектов
+          </p>
+
+          <div class="works-slider reveal">
+            <div class="works-slider-controls" aria-label="Управление слайдером работ">
+              <button class="works-slider-arrow works-slider-arrow-prev" type="button" data-works-slider-prev aria-label="Предыдущая работа">
+                <span class="works-slider-arrow-icon" aria-hidden="true"></span>
+              </button>
+              <button class="works-slider-arrow works-slider-arrow-next" type="button" data-works-slider-next aria-label="Следующая работа">
+                <span class="works-slider-arrow-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div class="works-slider-track" data-works-slider-track tabindex="0" aria-label="Слайдер выполненных работ">
+              <article class="card work-item">
+                <div class="card-image">
+                  <img
+                    class="work-image"
+                    src="/assets/images/kofe.jpg"
+                    alt="Вывеска для кофейни"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="work-title">КОФЕЙНЯ</h3>
+                  <p class="work-note">Типовое изготовление световых букв для кофейни/p>
+                </div>
+              </article>
+
+              <article class="card work-item">
+                <div class="card-image">
+                  <img
+                    class="work-image"
+                    src="/assets/images/tsvety.png"
+                    alt="Вывеска цветочного магазина"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="work-title">ЦВЕТЫ</h3>
+                  <p class="work-note">Изготовление световой вывески для магазина цветов в розовом цвете</p>
+                </div>
+              </article>
+
+              <article class="card work-item">
+                <div class="card-image">
+                  <img
+                    class="work-image"
+                    src="/assets/images/salon.webp"
+                    alt="Вывеска салона красоты"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="card-content">
+                  <h3 class="work-title">САЛОН КРАСОТЫ</h3>
+                  <p class="work-note">Плейсхолдер карточки работы</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process">
+        <div class="container">
+          <h2 class="section-title reveal">Как мы работаем</h2>
+          <p class="section-subtitle reveal delay-1">
+            Прозрачный и короткий цикл: от задачи до готового изделия с понятными этапами.
+          </p>
+
+          <div class="grid process-grid">
+            <article class="card process-step reveal">
+              <span class="process-number">01</span>
+              <strong>Бриф</strong>
+              <p>Уточняем задачу, сроки и бюджет.</p>
+            </article>
+
+            <article class="card process-step reveal delay-1">
+              <span class="process-number">02</span>
+              <strong>Концепция</strong>
+              <p>Подбираем решение под ваш формат бизнеса.</p>
+            </article>
+
+            <article class="card process-step reveal delay-2">
+              <span class="process-number">03</span>
+              <strong>Производство</strong>
+              <p>Изготавливаем и контролируем качество.</p>
+            </article>
+
+            <article class="card process-step reveal delay-3">
+              <span class="process-number">04</span>
+              <strong>Результат</strong>
+              <p>Передаём готовый объект, который работает на бизнес.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="container cta" id="cta">
+        <div class="cta-box reveal">
+          <div>
+            <h2>Обсудим задачу и предложим рабочее решение</h2>
+            <p>Напишите нам, чтобы получить предварительную консультацию и оценку сроков.</p>
+          </div>
+          <a class="button button-primary" href="mailto:hello@3delo.org">Связаться</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h2 class="footer-title">3Dело</h2>
+          <p class="footer-note">3D-печать, объёмные вывески и изделия на заказ.</p>
+        </div>
+
+        <nav class="footer-links" aria-label="Разделы сайта">
+          <a href="/custom-sign">Вывески на заказ</a>
+          <a href="/catalog">Каталог</a>
+          <a href="/calculator">Калькулятор</a>
+          <a href="#works">Работы</a>
+        </nav>
+
+        <div>
+          <p class="footer-contact">Телефон: +7 (900) 000-00-00</p>
+          <p class="footer-contact">Email: hello@3delo.org</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/main.js" defer></script>
+    <script src="/js/order-form.js" defer></script>
+  </body>
+</html>

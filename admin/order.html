@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заявка | 3Dело</title>
+    <meta name="description" content="Подробности заявки" />
+    <link rel="stylesheet" href="/admin-assets/css/admin.css" />
+  </head>
+  <body data-admin-page="order-detail">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <a href="/admin/orders" class="admin-brand">3Dело</a>
+        <nav class="admin-nav" aria-label="Админ навигация">
+          <a href="/admin/orders" aria-current="page">Заявки</a>
+          <a href="/admin/products">Товары</a>
+        </nav>
+        <button id="logoutBtn" type="button" class="admin-btn admin-btn-ghost">Выйти</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-title-row admin-title-row-detail">
+        <div>
+          <a href="/admin/orders" class="admin-back-link">Назад к списку</a>
+          <h1 id="orderTitle">Заявка</h1>
+        </div>
+        <button id="deleteOrderBtn" type="button" class="admin-btn admin-btn-danger">Удалить заявку</button>
+      </section>
+
+      <section class="admin-detail-top-grid">
+        <article class="admin-detail-card">
+          <p class="admin-stat-label">Дата создания</p>
+          <p class="admin-detail-strong" id="orderDate">-</p>
+        </article>
+
+        <article class="admin-detail-card">
+          <p class="admin-stat-label">Статус</p>
+          <div class="admin-status-row">
+            <span id="orderStatusBadge" class="admin-status-badge">-</span>
+            <select id="orderStatusSelect" aria-label="Статус заявки">
+              <option value="new">Новая</option>
+              <option value="in_progress">В работе</option>
+              <option value="completed">Завершено</option>
+              <option value="cancelled">Отменено</option>
+            </select>
+          </div>
+        </article>
+      </section>
+
+      <section class="admin-detail-grid">
+        <article class="admin-detail-card">
+          <h2>Клиент</h2>
+          <dl class="admin-detail-list">
+            <div>
+              <dt>Имя</dt>
+              <dd id="clientName">-</dd>
+            </div>
+            <div>
+              <dt>Телефон</dt>
+              <dd id="clientPhone">-</dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd id="clientEmail">-</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="admin-detail-card">
+          <h2>Задача</h2>
+          <dl class="admin-detail-list">
+            <div>
+              <dt>Услуга</dt>
+              <dd id="taskService">-</dd>
+            </div>
+            <div>
+              <dt>Количество</dt>
+              <dd id="taskQuantity">-</dd>
+            </div>
+            <div>
+              <dt>Описание</dt>
+              <dd id="taskComment">-</dd>
+            </div>
+            <div>
+              <dt>Страница, с которой пришла заявка</dt>
+              <dd id="taskSource">-</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="admin-detail-card" id="fileCard" hidden>
+          <h2>Прикреплённый файл</h2>
+          <p id="fileName">-</p>
+          <a id="fileDownloadBtn" class="admin-btn admin-btn-primary" href="#">Скачать файл</a>
+        </article>
+      </section>
+    </main>
+
+    <script src="/admin-assets/js/auth.js" defer></script>
+    <script src="/admin-assets/js/orders.js" defer></script>
+  </body>
+</html>
