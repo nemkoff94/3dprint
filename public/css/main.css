@@ -1767,6 +1767,16 @@ body.modal-open {
 .modeling-tags-grid h3 {
   margin: 0;
   font-size: 1.06rem;
+  color: #2f271e;
+}
+
+.modeling-cost-section .section-subtitle {
+  color: #d7e8fa;
+}
+
+.modeling-cost-section .print-factors-list,
+.modeling-cost-section .custom-inline-cta p {
+  color: #ecf5ff;
 }
 
 .modeling-production-block {
