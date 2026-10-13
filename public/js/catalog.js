@@ -134,7 +134,7 @@ function renderCatalogShell(app) {
           </div>
         </div>
         <div class="catalog-hero-visual" role="img" aria-label="Плейсхолдер готовой вывески">
-          <p class="hero-placeholder-label">место для фото ваших проектов</p>
+          <p class="hero-placeholder-label">место для фото</p>
         </div>
       </div>
     </section>
